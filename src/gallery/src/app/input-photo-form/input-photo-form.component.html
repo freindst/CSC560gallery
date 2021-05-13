@@ -1,0 +1,62 @@
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <div class="form-group" style="display: none;">
+        <label class="control-label" for="_id">ID</label>
+        <input type="text" class="form-control" id="_id" name="_id" formControlName="_id" readonly>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="file">File</label>
+        <input type="file" class="form-control" id="file" name="file" (change)="onChange($event)">
+    </div>
+
+    <img [src]="imgSrc" alt="preview" style="max-height: 300px;">
+
+    <div class="form-group">
+        <label class="control-label" for="filename">Filename</label>
+        <input type="text" class="form-control" id="filename" name="filename" formControlName="filename" readonly>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="type">Type</label>
+        <input type="text" class="form-control" id="type" name="type" formControlName="type">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="title">Title</label>
+        <input type="text" class="form-control" id="title" name="title" formControlName="title">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="description">Description</label>
+        <input type="text" class="form-control" id="description" name="description" formControlName="description">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="location">Location</label>
+        <input type="text" class="form-control" id="location" name="location" formControlName="location">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="people">People</label>
+        <input type="text" class="form-control" id="people" name="people" formControlName="people">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="datetime">Datetime</label>
+        <input type="text" class="form-control" id="datetime" name="datetime" formControlName="datetime">
+    </div>
+
+    <div class="form-group">
+        <label class="control-label" for="comment">Comment</label>
+        <input type="text" class="form-control" id="comment" name="comment" formControlName="comment">
+    </div>
+
+    <div class="form-group" style="display: none;">
+        <label class="control-label" for="path">Path</label>
+        <input type="text" class="form-control" id="path" name="path" formControlName="path" readonly>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">{{buttonText}}</button>
+    </div>
+</form>

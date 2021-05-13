@@ -1,0 +1,11 @@
+<div class="col" (click)="onClickDisplay(photo._id)">
+    <div class="card">
+        <img class="card-img-top img-thumbnail" [src]="photo.getImgSrc()" [alt]="photo.title">
+        <div class="card-body">
+            <h5 class="card-title text-center">{{photo.title}}</h5>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">{{photo.location}}</small>
+          </div>
+    </div>
+</div>

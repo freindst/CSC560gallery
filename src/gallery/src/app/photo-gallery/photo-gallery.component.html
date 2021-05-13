@@ -1,0 +1,6 @@
+<div *ngIf="photos.length == 0">
+    <h1>The gallery is empty.</h1>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <app-photo-thumb *ngFor="let photo of photos" [photo]="photo"></app-photo-thumb>
+</div>
